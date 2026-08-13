@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Life-Experience Exposome — Variable Explorer</title>
+<meta name="description" content="An interactive dictionary of life-experience exposome variables: definitions, EHR provenance, public dataset linkages, and derivations.">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="titles">
+      <h1>Life-Experience Exposome</h1>
+      <p class="subtitle">An interactive variable dictionary — definitions, EHR provenance, and public-data linkages</p>
+    </div>
+    <div class="header-tools">
+      <div class="search-wrap">
+        <input id="search" type="search" placeholder="Search variables…  ( / )" autocomplete="off" spellcheck="false" aria-label="Search variables">
+        <button id="search-clear" class="icon-btn" title="Clear search" aria-label="Clear search" hidden>✕</button>
+      </div>
+      <button id="theme-toggle" class="icon-btn" title="Toggle light / dark" aria-label="Toggle light or dark theme">◐</button>
+    </div>
+  </div>
+</header>
+
+<main class="layout">
+
+  <section class="tree-pane" aria-label="Variable hierarchy">
+    <div class="pane-bar">
+      <div id="corpus-stats" class="corpus-stats"></div>
+      <div class="pane-actions">
+        <button id="expand-all" class="text-btn">Expand all</button>
+        <button id="collapse-all" class="text-btn">Collapse all</button>
+      </div>
+    </div>
+    <div id="tree" class="tree" role="tree" aria-label="Exposome variable hierarchy"></div>
+    <p id="no-results" class="no-results" hidden>No variables match that search.</p>
+  </section>
+
+  <aside class="card-pane" aria-label="Variable detail">
+    <div id="card" class="card"></div>
+  </aside>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p class="cite">
+      <strong>Cite this dictionary:</strong>
+      <span id="cite-line"></span>
+    </p>
+    <p class="footer-links">
+      <button id="download-csv" class="text-btn">Download CSV</button>
+      <button id="print-all" class="text-btn">Print / PDF</button>
+      <span id="version-line" class="muted"></span>
+    </p>
+  </div>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="data/taxonomy.js"></script>
+<script src="data/variables/health.js"></script>
+<script src="data/variables/work.js"></script>
+<script src="data/variables/social.js"></script>
+<script src="data/variables/psychological.js"></script>
+<script src="data/variables/socioeconomic.js"></script>
+<script src="data/variables/environment.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

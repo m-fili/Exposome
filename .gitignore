@@ -1,0 +1,12 @@
+# OS / sync artifacts
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# Office lock files
+~$*
+
+# Editor
+.vscode/
+.idea/
+*.swp
